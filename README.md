@@ -4,9 +4,9 @@
 
 - [X] Render a list of the users provided by this API displaying first and last name and avatar using the user image. 
 
-- [ ] Use https://material-ui.com/ to stylize your app.
+- [X] Use https://material-ui.com/ to stylize your app.
 
-- [ ] Using controlled components and/or refs: create a form with the inputs required to use the following endpoint:
+- [X] Using controlled components and/or refs: create a form with the inputs required to use the following endpoint:
 **POST Request/api/users**
 
 ``` json
@@ -16,4 +16,4 @@
 }
 ```
 
-- [ ] If POST request successful: add the created record to the list.
+- [X] If POST request successful: add the created record to the list.

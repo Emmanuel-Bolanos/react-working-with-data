@@ -1,8 +1,9 @@
 import React from 'react';
+import Avatar from '@material-ui/core/Avatar';
 
 const UserAvatar = ({src}) => {
   return (
-    <img src={src} alt="user avatar" />
+    <Avatar src={src} alt="user avatar" />
   );
 };
 

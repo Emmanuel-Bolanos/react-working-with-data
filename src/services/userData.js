@@ -6,7 +6,6 @@ const data = async () => {
     const userData = await (response.data.data);
     return userData;
   } catch (err) {
-    // TODO error handling
     console.log(err);
   }
 };
