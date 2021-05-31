@@ -24,10 +24,13 @@ class CreateUserForm extends Component {
   }
   render() {
     return (
-      <form onSubmit={e => {
-        e.preventDefault(); 
-        this.handleClick();
-      }}>
+      <form 
+        onSubmit={e => {
+          e.preventDefault(); 
+          this.handleClick();
+        }}
+        className="inputForm"
+      >
         <TextField 
           name='firstName'
           required 
@@ -35,6 +38,7 @@ class CreateUserForm extends Component {
           label='First Name'
           onChange={this.handleChange}
           value={this.state.firstName}
+          fullWidth
         />
         <TextField 
           name='lastName'
@@ -42,6 +46,7 @@ class CreateUserForm extends Component {
           label='Last Name' 
           onChange={this.handleChange}
           value={this.state.lastName}
+          fullWidth
         />
         <TextField 
           name='job'
@@ -50,10 +55,14 @@ class CreateUserForm extends Component {
           label='Job' 
           onChange={this.handleChange}
           value={this.state.job}
+          fullWidth
         />
         <Button  
           type="submit"
+          color="primary"
           variant="contained"
+          size="large"
+          fullWidth
         >
           Submit
         </Button>

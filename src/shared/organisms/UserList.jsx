@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { List, ListItem, ListItemAvatar, ListItemText } from '@material-ui/core';
 import Divider from '@material-ui/core/Divider';
-// import Typography from '@material-ui/core/Typography';
 import UserAvatar from '../molecules/Avatar';
 import UserName from '../molecules/UserName';
 
@@ -10,9 +9,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '40%',
     minWidth: 'fit-content',
-    backgroundColor: '#bcd65a',
     boxShadow: '2px 2px 4px black',
-    color: '#2b223c',
+    margin: '2rem',
+    backgroundColor: theme.palette.primary.main,
+  },
+  listItems: {
+    padding: '1rem',
   }
 }));
 
@@ -28,7 +30,7 @@ const UserList = ({usersData}) => {
   : usersData.map((user) => {
     return (
       <React.Fragment key={user.id}>
-        <ListItem alignItems="center"> 
+        <ListItem className={classes.listItems} alignItems="center"> 
           <ListItemAvatar>
             <UserAvatar src={user.avatar}/> 
           </ListItemAvatar>
@@ -41,7 +43,9 @@ const UserList = ({usersData}) => {
     )
   });
   return (
-    <List className={classes.root}>
+    <List 
+      className={classes.root}
+    >
       {users}
     </List>
   )

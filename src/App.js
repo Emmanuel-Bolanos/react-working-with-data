@@ -3,7 +3,6 @@ import UserList from './shared/organisms/UserList'
 import CreateNewUser from './shared/organisms/CreateNewUser';
 import userData from './services/userData';
 import createUser from './services/createUser';
-import './App.css';
 
 const randomID = (limit) => {
   return Math.floor(Math.random(limit) * Math.floor(limit));
